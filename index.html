@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> Vacipet</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+<header>
+          <div class="banner">Seu pet protegido, você tranquilo!</div>
+        <nav>
+              
+            <div id="logo">
+                <img src="vacipets.png" alt="logo" width="185px" >
+
+                <svg width="0" height="0" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8 32H0V21.9849C0 17.1239 4.0116 13.1839 8.96 13.1839H15.2V0.468341C15.2 0.251458 15.3792 0.0754376 15.6 0.0754376C15.7184 0.0754376 15.8308 0.127301 15.9068 0.216883L17.3616 1.92719C18.402 1.07577 19.74 0.563816 21.2 0.563816H22C23.442 0.563816 24.7656 1.06359 25.8 1.89654L27.2932 0.14066C27.3692 0.0514706 27.4812 0 27.6 0C27.8208 0 28 0.175628 28 0.392904V15.3896H23.36C17.528 15.3896 12.8 20.0337 12.8 25.7623V32Z" fill="#45413E" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M29.76 17.0569V12.0875C29.76 12.0836 29.76 12.0797 29.76 12.0758V6.79004C29.76 6.57435 29.9392 6.4 30.16 6.4C30.266 6.4 30.3676 6.44095 30.4424 6.51389L31.9576 7.98784C32.7864 7.42501 33.7936 7.09504 34.88 7.09504C35.97 7.09504 36.9808 7.42735 37.8112 7.99369L39.3176 6.52793C39.3924 6.45499 39.494 6.41404 39.6 6.41404C39.8208 6.41404 40 6.58878 40 6.80408V23.2632C40 28.0883 35.9884 32 31.04 32H14.4V25.7938C14.4 20.969 18.4116 17.0569 23.36 17.0569H29.76Z" fill="#45413E" />
+                </svg>
+
+                <br>
+            </div>
+            <ul class="navigation-menu">
+                <li><a href="sobre nos.html">Sobre</a>
+          
+
+                <li><a href="lembrete/lembra.html">Lembrete</a>
+                  
+                    
+                <li><a href="Carteira de pets/pet-cadastro.html">Carteira</a></li>
+
+     
+                <li><a href="contato.html">Localização &amp; Contato</a>
+                </li>
+                <li>
+   
+                    <div class="login__sell" id="login__sell">
+                        <button href="" class="login__btn" onclick="openLogin()">Login</button>
+                  
+                    </div>
+                    <div class="login_email hidden" id="email">
+                        <div class="email_login">
+                            <div class="icons_flex">
+                                <i class="fa-solid fa-arrow-left" onclick="backEmail()"></i>
+                                <i class="fa-solid fa-xmark close__btn" onclick="closeEmail()"></i>
+                            </div>
+                            <img src="" alt="">
+                            <h2>Redefinir senha</h2>
+                            <input type="text" id="emailLogin" placeholder="Email">
+                            <button class="next_button" onclick="login()">Senha</button>
+                            <p>Venha proteger seu bichinho faça o login agora.</p>
+                        </div>
+                    </div>
+                    <div class="login_phone hidden" id="phone">
+                        <div class="phone_login">
+                            <div class="icons_flex">
+                                <i class="fa-solid fa-arrow-left" onclick="backPhone()"></i>
+                                <i class="fa-solid fa-xmark close__btn" onclick="closePhone()"></i>
+                            </div>
+                            <img src="./images/email__login.svg" alt="">
+                            <h2>Entre com o telefone</h2>
+                            <input type="text" id="phoneLogin" placeholder="Phone Number">
+                            <button disabled class="next_button" onclick="loginPhone()"> Next</button>
+                            <p>We won't reveal your phone number to anyone else nor use it to send you spam.</p>
+                        </div>
+                    </div>
+                    <div class="signUp hidden" id="signUp">
+                        <div class="signUp_account">
+                            <div class="icons_flex">
+                                <i class="fa-solid fa-arrow-left" onclick="backSignUp()"></i>
+                                <i class="fa-solid fa-xmark close__btn" onclick="closeSignUp()"></i>
+                            </div>
+                            <img src="./images/email__login.svg" alt="">
+                            <h2>Criar Cadastro</h2>
+                            <input type="text" id="name" placeholder="Nome">
+                            <input type="text" id="signEmail" placeholder="Email">
+                            <input type="text" id="signphone" placeholder="Telefone">
+                            <input type="text" id="gender" placeholder="senha">
+                            <button class="next_button" id="button" onclick="signUp()">Cadastra-se</button>
+                            <p>Não revelaremos seu número de telefone a mais ninguém nem o usaremos para enviar spam..</p>
+                        </div>
+                    </div>
+                    <div class="login hidden" id="login">
+                        <div class="login_form">
+                            <i class="fa-solid fa-xmark close__btn" onclick="closeLogin()"></i>
+                            <img src="vacipets.png" alt="" width="149px">
+                            <h1>Bem vindo ao Vacipet</h1>
+                            <h2>Venha cuidar da saude do seu pet entre agora.</h2>
+                            <button href="" class="loginSign_button"><img src="./images/facebok.svg" alt=""> Continuar
+                                Facebook</button>
+                            <button href="" class="loginSign_button" onclick="createAccountPage()"><img src="./images/googleIcon.svg"
+                                    alt="">Cadastra-se aqui</button>
+                            <button href="" class="loginSign_button" onclick="emailLogin()"><img src="./images/email.svg" alt="">
+                                Redefinir senha</button>
+                            <button href="" class="loginSign_button" onclick="phoneLogin()"><img src="./images/phone.svg" alt="">
+                                Continuar com o Tel</button>
+                            <p>Ao continuar, você está aceitando os Termos de Uso e Política de Privacidade da
+                                <b> Vacipet Termos </b> 
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <section class="hero">
+                <h1>Cuidando da saúde do seu pet com carinho</h1>
+                <div class="btn-group">
+                  
+                        <a href="Carteira de pets/pet-cadastro.html"> <button class="btn-filled-dark"><span class="material-symbols-outlined">
+                            arrow_forward
+                            </span>Criar carteira agora!</button></a>
+        
+                </li>
+            </ul>
+            
+          
+    </section>
+    <section>
+        <h2>Categorias</h2>
+
+        <ul class="shop-pets">
+            <li class="card-large card-light" id="sup-dog">
+                <div class="card-image"><img src="https://ouch-cdn2.icons8.com/5ccPOQq69UKQcbmXfjvOScfFc9NXKG0Xu6DPNQ8b0f8/rs:fit:368:247/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMTEw/LzFlODdiYzcyLTBl/OWEtNDFlNS05N2Ey/LTMzYTA4MDQ5MWU1/OC5wbmc.png"></div>
+                <ul>
+                    Cães
+                    <li><a href="Carteira de pets/pet-cadastro.html">Vacinas</a></li>
+                    <a href="Carteira de pets/pet-cadastro.html"> <button class="btn-outline-light"><span class="material-symbols-outlined">
+                        arrow_forward
+                    </span>Criar carteira</button></a>
+                </ul>
+
+
+            </li>
+
+            <li class="card-large card-dark" id="sup-cat">
+                <div class="card-image"><img src="https://ouch-cdn2.icons8.com/RjiKOF2gGKiIVnIMFi0O1a4aU7DoHfhbkXr2JbUYZ3A/rs:fit:368:313/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMzEy/LzliNDQ3MmVlLWZh/YjMtNDQwNy1iOWVh/LWMwOTdlYWNjNWE3/NS5wbmc.png"></div>
+                <ul>Gatos
+                    <li><a href="#">Vacinas</a></li>
+                    <a href="Carteira de pets/pet-cadastro.html"> <button class="btn-outline-light"><span class="material-symbols-outlined">
+                        arrow_forward
+                        </span>Criar carteira</button></a>
+                     
+                </ul>
+
+   
+        </ul>
+    </section>
+
+    <section>
+        <h2>Saiba mais!</h2>
+
+        <ul class="services">
+            <li class="card-large card-dark card-wide" id="serv-groom">
+      
+                <div class="card-image"><img src="calcario.png"></div>
+                <ul>
+                    Menor custos veterinarios<span class="subtitle"></span>
+
+                    <li><a href="#">Cuidado da pelagem</a><span></span></li>
+                    <li><a href="#">Cuidados com as Unhas</a><span></span></li>
+                    <li><a href="#">Alimentação Adequada</a><span></span></li>
+                    <li><a href="#">Prevenção de Doenças</a><span></span></li>
+                    <li><a href="#">Higiene Bucal</a><span></span></li>
+                    <li><a href="#">Vacinação em Dia</a><span></span></li>
+                    <li><a href="#">Exercícios Regulares</a><span></span></li>
+                    <li><a href="#">Consultas Preventivas</a><span></span></li>
+         
+                 
+                    <a href="lembrete/lembra.html"> <button class="btn-filled-dark"><span class="material-symbols-outlined">
+                        calendar_month
+                        </span>fique ligado</button></a>
+
+                </ul>
+
+
+            </li>
+            <li class="card-large card-dark card-wide" id="serv-board">
+                <div class="card-image"><img src="vaci.png"></div>
+                <ul>
+                    Prevenção de Doenças Graves<span class="subtitle"></span>
+
+                    <li><a href="#">Hospedagem de curta duração</a><span></span></li>
+                    <li><a href="#">Check-ups Veterinários Regulares</a><span> </li>
+                    <li><a href="#">Vacinação Adequada</a><span></li>
+                    <li><a href="#">Exercícios Regulares</a><span></li>
+                    <li><a href="#">Higiene Bucal</a><span></li>
+                    <li><a href="#">Identificação Rápida de Sintomas</a><span></li>
+             
+                        <a href="lembrete/lembra.html"> <button class="btn-filled-dark"><span class="material-symbols-outlined">
+                            calendar_month
+                            </span>fique ligado</button></a>
+                         
+                </ul>
+
+            </li>
+        </ul>
+    </section>
+
+    <section id="locate">
+
+        <div>
+            <h2>Localização &amp; Clinica</h2>
+            <p>Nossa equipe experiente e amigável está sempre pronta para ajudá-lo a fazer as melhores escolhas para seus amigos peludos, emplumados ou aquáticos.</p>
+            <div class="btn-group">
+               <a href="contato.html"> <button class="btn-filled-dark"><span class="material-symbols-outlined">
+                pin_drop
+            </span>Contato</button></a>
+
+
+            <a href="vaccinei.html"> <button class="btn-outline-dark btn-hover-color"><span class="material-symbols-outlined">
+contact_support
+</span>Saiba Mais!</button></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+
+       
+        <ul>
+            Comprar por tipo de pet
+            <li><a href="#">Caẽs</a></li>
+            <li><a href="#">Gatos</a></li>
+
+        </ul>
+
+
+        <ul>
+            Nossa empresa
+            <li><a href="#">Localização &amp; Clinicas</a></li>
+            <li><a href="sobre nos.html"> <h2 id="titulo-section">Sobre a <span id="highlight-cyan">empresa</span></h2></a></li>
+            </div>
+        </div>
+        </ul>
+        <ul>
+            <!--end footer col-->
+                <!-- footer col-->
+                <div class="footer-col">
+                    <h4>Se subescreva!</h4>
+                    <div class="form-sub">
+                        <form>
+                            <input type="email" placeholder="Digite o seu e-mail" required>
+                            <button>subscrever</button>
+                        </form>
+                    </div>
+
+                    <div class="medias-socias">
+                        <a href="#"> <i class="fa fa-facebook"></i> </a>
+                        <a href="https://www.instagram.com/vaci_pet?utm_source=qr&igsh=MTVvdnFoeDl0OXp5cw=="> <i class="fa fa-instagram"></i> </a>
+                        <a href="#"> <i class="fa fa-twitter"></i> </a>
+                        <a href="#"> <i class="fa fa-linkedin"></i> </a>
+                    </div>
+
+                </div>
+        </ul>
+
+
+    </footer>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+<script>
+    var categories = [
+        "Mobile Phones",
+        
+    ]
+
+    categories.map((data) => {
+        document.getElementById("links").innerHTML += `
+        <button onclick="categorySet(this)">${data}</button>
+        `
+    })
+
+    function showData() {
+        var data = JSON.parse(localStorage.getItem("users"))
+        var email = localStorage.getItem("email")
+        var isAuthenticated = localStorage.getItem("isAuthenticated")
+        for (let i = 0; i < data.length; i++) {
+            if (email == data[i].email && isAuthenticated === "true") {
+                document.getElementById("login__sell").innerHTML = `
+       <img class="avatar" onclick="profilePage()" width="60px"src="./images/avatar.png" />
+                 <button onclick="sell()" class="sell__btn">+ Sell</button>
+                `
+            }
+        }
+    }
+
+    function sell() {
+        var data = JSON.parse(localStorage.getItem("users"))
+        var email = localStorage.getItem("email")
+        var isAuthenticated = localStorage.getItem("isAuthenticated")
+        var flage = true;
+        for (let i = 0; i < data.length; i++) {
+            if (email == data[i].email && isAuthenticated === "true") {
+                flage = false
+                window.location.href = "./sell.html"
+            }
+        }
+        if (flage === true) {
+            document.getElementById("login").classList.remove("hidden")
+        }
+    }
+
+    function profilePage() {
+        window.location.href = "./profile.html"
+    }
+    showData()
+    var data = JSON.parse(localStorage.getItem("products")) || []
+    data.map((card, index) => {
+        document.getElementById("cards").innerHTML += `
+                   <div onclick="productDetail(${index})" class="card">
+                       <div class="img__featured">
+                           <img src="${card.image}" alt="">
+                           <p class="featured">featured</p>
+                       </div>
+                       <div class="card__content">
+                           <div class="card__content-gap">
+                               <div class="name__heart">
+                                   <h4>${card.name}</h4>
+                                   <i class="fa-solid fa-heart"></i>
+                               </div>
+                               <h2>Rs ${card.price}</h2>
+                           </div>
+                           <h5>${card.location}</h5>
+                       </div>
+                   </div>
+        `
+
+    })
+
+    function productDetail(index) {
+        console.log(data);
+        localStorage.setItem("productName", data[index].name)
+        localStorage.setItem("name", data[index].profileName)
+        localStorage.setItem("description", data[index].description)
+        localStorage.setItem("image", data[index].image)
+        localStorage.setItem("price", data[index].price)
+        localStorage.setItem("location", data[index].location)
+        localStorage.setItem("phone", data[index].profilePhone)
+        localStorage.setItem("phoneShow", data[index].phoneShow)
+        window.location.href = "./productDetails.html"
+    }
+
+    function openLogin() {
+        document.getElementById("login").classList.remove("hidden");
+    }
+
+    function closeLogin() {
+        document.getElementById("login").classList.add("hidden")
+    }
+
+    function emailLogin() {
+        document.getElementById("email").classList.remove("hidden");
+        document.getElementById("login").classList.add("hidden")
+    }
+
+    function closeEmail() {
+        document.getElementById("email").classList.add("hidden")
+    }
+
+    function backEmail() {
+        document.getElementById("email").classList.add("hidden")
+        document.getElementById("login").classList.remove("hidden");
+    }
+
+    function phoneLogin() {
+        document.getElementById("phone").classList.remove("hidden");
+        document.getElementById("login").classList.add("hidden")
+    }
+
+    function closePhone() {
+        document.getElementById("phone").classList.add("hidden")
+    }
+
+    function backPhone() {
+        document.getElementById("phone").classList.add("hidden")
+        document.getElementById("login").classList.remove("hidden");
+    }
+
+    function createAccountPage() {
+        document.getElementById("signUp").classList.remove("hidden");
+        document.getElementById("login").classList.add("hidden")
+    }
+
+    function closeSignUp() {
+        document.getElementById("signUp").classList.add("hidden")
+    }
+
+    function backSignUp() {
+        document.getElementById("signUp").classList.add("hidden")
+        document.getElementById("login").classList.remove("hidden");
+    }
+
+    function signUp() {
+        let data = JSON.parse(localStorage.getItem("users")) ? JSON.parse(localStorage.getItem("users")) : []
+        let flage = false
+        for (let i = 0; i < data.length; i++) {
+            if (data[i].email === document.getElementById("signEmail").value) {
+                flage = true
+                alert("You have entered a duplicate email address")
+            }
+        }
+        if (flage === false) {
+
+            let users = []
+            let obj = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("signEmail").value,
+                gender: document.getElementById("gender").value,
+                phone: document.getElementById("signphone").value,
+                isAuthenticated: true
+            }
+            users = JSON.parse(localStorage.getItem("users")) ? JSON.parse(localStorage.getItem("users")) : []
+
+            users.push(obj)
+            localStorage.setItem("users", JSON.stringify(users))
+            document.getElementById("signUp").classList.add("hidden");
+            document.getElementById("email").classList.remove("hidden");
+        }
+    }
+
+    function login() {
+        let email = document.getElementById("emailLogin").value;
+        let users = JSON.parse(localStorage.getItem("users")) || []
+        var flage = false;
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].email === email) {
+                flage = true;
+                alert("You have successfully Login");
+                localStorage.setItem("name", users[i].name);
+                localStorage.setItem("email", email);
+                localStorage.setItem("phone", users[i].phone);
+                localStorage.setItem("gender", users[i].gender);
+                localStorage.setItem("isAuthenticated", users[i].isAuthenticated);
+                window.location.reload()
+                break;
+            }
+        }
+        if (flage === false) {
+            alert("Please enter a valid email and password");
+        }
+    }
+
+    function loginPhone() {
+        let email = document.getElementById("phoneLogin").value;
+        let users = JSON.parse(localStorage.getItem("users"))
+        var flage = false;
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].phone === phone) {
+                flage = true;
+                alert("You have successfully Login");
+                localStorage.setItem("name", users[i].name);
+                localStorage.setItem("email", email);
+                localStorage.setItem("phone", user[i].phone);
+                localStorage.setItem("isAuthenticated", user[i].isAuthenticated);
+                document.getElementById("phone").classList.add("hidden")
+                if (flage == false) {
+                    alert("Please enter a valid email and password");
+                }
+            }
+        }
+    }
+</script>
+
+</html>
